@@ -1,3 +1,5 @@
+# INSTAGRAM CLONE
+
 ## Run
 
 Run the code with the command: node .
