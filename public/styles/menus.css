@@ -1,0 +1,221 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+button{
+    border: none;
+    background-color: transparent;
+}
+.menus{
+    position: fixed;
+    padding-left: 20px;
+    border-right: 1px solid #c3c4c5;
+    width: 240px;
+}
+
+.menus_change{
+    position: fixed;
+    border-right: 1px solid #c3c4c5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0px;
+    height: 100%;
+    padding: 0px 20px;
+}
+
+.area_search{
+    position: fixed;
+    margin-left: 96px;
+    width: 375px;
+    height: 649px;
+    background: white;
+    border-radius: 20px;
+    border-right: 1px solid #c3c4c5;
+
+    display: none;
+    flex-direction: column;
+    padding-top: 30px;
+    
+}
+.input_search{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding:0px 20px ;
+}
+.input_search input{
+    border-radius: 5px;
+    height: 40px;
+    border: none;
+    background-color: #EFEFEf;
+    padding-left: 10px;
+    font-size: 17px;
+}
+.input_search input:focus{
+    outline: none;
+}
+.input_search span{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.line_search{
+    height: 1px;
+    width: 375px;   
+    margin-top: 30px; 
+    background-color: #c3c4c5;
+}
+
+
+
+
+
+
+.menus_profile{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 100px;
+    padding-left: 0px;
+}
+.menus_profile button{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-left: 20px;
+}
+
+
+
+.menus_options{
+    padding-top: 40px;
+}
+.menus_options div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 0px 15px;
+}
+.menus_options img{
+    height: 24px;
+}
+.menus_options div:hover{
+    border-radius: 10px;
+    width: 200px;
+    background-color: #ededed;
+    cursor: pointer;
+}
+
+.menus_options_change{
+    padding-left: 0px;
+    padding-top: 54px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.menus_options_change img{
+    height: 24px;
+}
+.menus_options_change div{
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menus_options_change div:hover{
+    border-radius: 10px;
+    background-color: #ededed;
+    cursor: pointer;
+}
+
+
+.font_menus p{
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#logo_insta{
+    display: flex;
+    justify-content: flex-start;
+    width: 103px;
+    padding-top: 20px;
+    padding-left: 10px;
+}
+#logo_insta_change{
+    display: flex;
+    justify-content: flex-start;
+    width: 24px;
+    padding-top: 40px;
+    padding-left: 0px;
+}
+
+.more{  
+    display: flex;
+    flex-direction: column;
+    row-gap: 3px;
+}
+
+.more div{
+    border: 1px solid black;
+    width: 15px;
+    border-radius: 10px;
+}
+
+.moreoptions{
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: white;
+    border:1px solid #c3c4c5;
+    bottom: 20px;
+    left: 84px;
+
+    width:266px;
+    height: 480px;
+
+    border-radius: 10px;
+}
+.gap{
+    height: 6px;
+    background-color: #DBDBDB4D;
+}
+
+.moreoptions div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 8px;
+}
+.moreoptions span{
+    font-size: 13px;
+}
+.moreoptions img{
+    width: 13px;
+}
+.moreoptions button{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 250px;
+    height: 50px;
+}
+.moreoptions button:hover{
+    background-color: #DBDBDB4D;
+    border-radius: 10px;
+}
+
+#gapid{
+    background-color: #DBDBDB4D;
+    height: 3px;
+}

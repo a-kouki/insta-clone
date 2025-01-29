@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./styles/main.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/menus.css">
+    <script type="module" src="./js-functions/menu_options.js"></script>
+    <script type="module" src="./js-functions/posts_main.js"></script>
+    <title>Instagram</title>
+</head>
+<body>
+    
+    <div class="area_search">
+        <div class="input_search">
+            <span>Search</span>
+            <input placeholder="Search">
+        </div>
+        <div class="line_search"></div>
+        <div class="list_search"></div>
+    </div>
+
+    <div class="menus">
+    </div>
+
+    <div class="moreoptions">
+        <div>
+            <button><img src="./icons/saved.png"><span>Setting</span></button>
+            <button><img src="./icons/saved.png"><span>Your activity</span></button>
+            <button><img src="./icons/saved.png"><span>Saved</span></button>
+            <button><img src="./icons/saved.png"><span>Switch appearance</span></button>
+            <button><img src="./icons/saved.png"><span>Report a problem</span></button>
+        </div>
+
+        <span class="gap"></span>
+
+        <div>
+            <button><span>Threads</span></button>
+        </div>
+
+        <span class="gap"></span>
+
+        
+        <div><button><span>Switch accounts</span></button></div>
+        <span id="gapid"></span>
+        <div><button><span>Log out</span></button></div>
+    </div>
+
+    <div class="posts_story" >
+        <div class="stories">
+            <div>
+                <img src="./icons/story.png">
+                <p>name</p>
+            </div>
+        </div>
+        
+        <div class="posts_area">
+        </div>
+    <div>
+
+
+    
+    <script>
+        
+        let story = ' ';
+      
+        for (let i = 0; i < 20; i++){
+            story += `
+            <div>
+                <img src="./icons/story.png">
+                <p>name</p>
+            </div>`
+        };
+
+
+        document.querySelector('.stories').innerHTML = story;
+        
+        
+    </script>
+</body>
+</html>
