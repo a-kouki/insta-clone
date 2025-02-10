@@ -1,0 +1,18 @@
+{
+  "name": "user_name",
+  "profile_img": "./picture_users/nopicture.png",
+  "descrition": "New here",
+  "follower": [
+    "wonderwomanprofile",
+    "batmanprofile",
+    "supermanprofile"
+  ],
+  "following": [
+    "supermanprofile",
+    "batmanprofile",
+    "wonderwomanprofile",
+    "ciborgue"
+  ],
+  "posts_user": [
+  ]
+}
