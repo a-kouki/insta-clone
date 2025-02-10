@@ -2,10 +2,11 @@
 document.addEventListener('DOMContentLoaded', async () => {
     const followButton = document.getElementById('follow_user');
     const username = document.querySelector('.first_line_profile span').textContent;
+    console.log('chegou ae aqui 1');
     try {
+        
         const response = await fetch('/yourdata');
         const yourData = await response.json();
-
         const isFollowing = yourData.following.includes(username);
 
         if (isFollowing) {

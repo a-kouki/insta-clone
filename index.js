@@ -20,26 +20,26 @@ function loadYourData(){
 
 app.get('/', (req, res, next) => {
     res.sendFile(path.join(__dirname, '/public/main.html'));
-})
-
-app.get('/yourdata', (req, res) => {
-    const yourData = loadYourData();
-    res.json(yourData);
 });
-app.post('/update-following-json', express.json(), (req,res) => {
-    const updateData = req.body;
-    console.log(updateData);
-    fs.writeFile(
-        path.join(__dirname, './data/your_data.json'),
-        JSON.stringify(updateData, null, 2),
-        (err) => {
-            if(err){
-                console.error('Erro ao salvar os dados:', err);
-                return res.status(500).send('Erro ao salvar os dados.');
-            }
-            res.status(200).send('Dados atualizados com sucesso!');
-        }
-    );
+
+app.get('/api/random-posts', (req, res) => {
+    const users = loadUsersData(); 
+
+    const limit = 10; 
+    
+    const randomPosts = [];
+    const shuffledUsers = users.sort(() => 0.5 - Math.random());
+
+    for (let i = 0; i < 10; i++) {
+        const user = shuffledUsers[Math.floor(Math.random() * shuffledUsers.length)];
+        if (!user) continue;
+
+        const shuffledPosts = user.posts_user.sort(() => 0.5 - Math.random());
+        const randomPost = shuffledPosts[0];
+        randomPosts.push({ user, post: randomPost });
+    }
+
+    res.json({ posts: randomPosts});
 });
 
 app.get('/profile', (req, res) => {
@@ -85,6 +85,11 @@ app.get('/profile', (req, res) => {
 
 });
 
+app.get('/yourdata', (req, res) => {
+    const yourData = loadYourData();
+    res.json(yourData);
+});
+
 app.get('/:username', (req, res) => {
     const username = req.params.username; 
     const users = loadUsersData();
@@ -121,7 +126,11 @@ app.get('/:username', (req, res) => {
                     if(i < 0 ) break;
 
                     postsHTML += `
-                    <button style="grid-column: ${j}; grid-row: ${countRow};"><img src="${posts_qty[i].post_img}"><span style="display: none">${posts_qty[i].descrition_post}</span></button>
+                    <button style="grid-column: ${j}; grid-row: ${countRow};">
+                    <img src="${posts_qty[i].post_img}">
+                    <span style="display: none">${posts_qty[i].descrition_post}</span>
+                    <span id="music_post" style="display: none">${posts_qty[i].music_name}</span>
+                    </button>
                     `;
                     i--;
                 };
@@ -129,9 +138,7 @@ app.get('/:username', (req, res) => {
             };
 
             userHtml = userHtml.replace('{{posts}}', postsHTML);
-            
-            const you = loadYourData();
-
+        
             res.send(userHtml);
         });
     } else {
@@ -139,6 +146,20 @@ app.get('/:username', (req, res) => {
     } 
 });
 
+app.post('/update-following-json', express.json(), (req,res) => {
+    const updateData = req.body;
+    fs.writeFile(
+        path.join(__dirname, './data/your_data.json'),
+        JSON.stringify(updateData, null, 2),
+        (err) => {
+            if(err){
+                console.error('Erro ao salvar os dados:', err);
+                return res.status(500).send('Erro ao salvar os dados.');
+            }
+            res.status(200).send('Dados atualizados com sucesso!');
+        }
+    );
+});
 
 app.listen(port, () => {
     console.log(`Servidor rodando em http://localhost:${port}`);

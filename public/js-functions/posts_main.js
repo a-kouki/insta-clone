@@ -1,63 +1,77 @@
-const users = [ {name: "batmanprofile",
-    profile_img:"./picture_users/batmanprofile.jpg",
-    descrition:"Work with vigilance\nIam vingance, Iam night, IAM BATMAN",
+function post_main_insta(posts) {
+    let code_html_posts = '';
 
-    posts_user:[{
-        number: 1,
-        data_post: "2d",
-        music_name: "Batman 1989 Theme by Danny Elfman",
-        post_img:"./picture_users/batman/post01.jpg",
-        descrition_post: "Going fight crime. Its be long night.",
-        }]
-}];
-
-function post_main_insta(){
-    let code_html_posts = 
-        `
-        <div class="posts">  
-            <div class="details_one">
-                <div class="details_two">
-                    <img src="./icons/profile.jpg" style="width: 50px; border-radius: 50%;">
-                    <div>
-                        <p><button>${users[0].name}</button> • <button>${users[0].posts_user[0].data_post}</button> • <button id="follow">Follow</button></p>
-                        <span>${users[0].posts_user[0].music_name}</span>
+    posts.forEach(({ user, post }) => {
+        code_html_posts += `
+            <div class="posts">  
+                <div class="details_one">
+                    <div class="details_two">
+                        <img src="${user.profile_img}" style="width: 42px; border-radius: 50%;">
+                        <div>
+                            <a href='/${user.name}'><button>${user.name}</button> • <button>${post.data_post}</button> • <button id="follow">Follow</button></a><br>
+                            <span>${post.music_name}</span>
+                        </div>
                     </div>
-                </div>
-                <p>•••</p>
-            </div>
-
-            <div style="background-color: black;">
-            <img id="post_img" src="${users[0].posts_user[0].post_img}">
-            </div>
-            <div class="icons">
-                <div class="icons_right">
-                    <button><img src="./icons/heart.png"></button>
-                    <button><img src="./icons/message.png"></button>
-                    <button><img src="./icons/send.png"></button>
+                    <p>•••</p>
                 </div>
 
-                <button><img src="./icons/save.png" ></button>
-            </div>
+                <img id="post_img" src="${post.post_img}">
+                
+                <div class="icons">
+                    <div class="icons_right">
+                        <button><img src="./icons/heart.png"></button>
+                        <button><img src="./icons/message.png"></button>
+                        <button><img src="./icons/send.png"></button>
+                    </div>
+                    <button><img src="./icons/save.png" ></button>
+                </div>
 
-            <div class="description">
-                <button>Like by</button>
-                <button>${users[0].name}</button><p>${users[0].posts_user[0].descrition_post}</p>
+                <div class="description">
+                    <button>Like by</button>
+                    
+                    <div id="comment_line">
+                        <a href="./${user.name}">${user.name}</a> 
+                        <span>${post.descrition_post}</span>
+                    </div>
 
-                <button id="view_comment">View all *number comments</button>
-                <textarea placeholder="Add a comment.."></textarea>
+                    <button id="view_comment">View all *number comments</button>
+                    <textarea placeholder="Add a comment.."></textarea>
+                </div>
             </div>
-        </div>
-    `;
-    console.log(users[0].name);
-    let p ='';
-    for(let i=0;i<=10;i++){
-        p += code_html_posts;
-        i++;
-    }
-    document.querySelector('.posts_area').innerHTML = p;
-    
+        `;
+    });
+
+    document.querySelector('.posts_area').insertAdjacentHTML('beforeend',code_html_posts);
+    //document.querySelector('.posts_area').innerHTML += code_html_posts;
+
 };
 
-document.addEventListener("DOMContentLoaded", () =>{
-    post_main_insta();
-})
+
+document.addEventListener("DOMContentLoaded", () => {
+    fetch('/api/random-posts')  
+        .then(response => response.json())
+        .then(data => {
+            post_main_insta(data.posts);
+        });
+});
+
+let currentPage = 1;
+let loading = false;
+
+function loadMorePosts() {
+
+    fetch(`/api/random-posts`)
+        .then(response => response.json())
+        .then(data => {
+            post_main_insta(data.posts); 
+        })
+        .catch(error => {
+            console.error("Erro ao carregar mais posts:", error);
+        });
+}
+
+window.addEventListener("scroll", () => {
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 50) {
+        loadMorePosts();
+    }
+});

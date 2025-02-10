@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="module" src="./js-functions/menu_options.js"></script>
-    <script type="module" src="./js-functions/users_profile.js"></script>
     <script type="module" src="./js-functions/publication_order.js"></script>
     <script type="module" src="./js-functions/verification_follow.js"></script>
 
@@ -103,7 +102,7 @@
         <div class="post_view_center" style="display: none;">
             <div class="post_view" >
                 <div class="img_or_Video" style="background-color: black;">
-                    <img id="post_img" src="{{post_image}}">
+                    <img id="post_img" src="">
                 </div>
     
                 <div class="about_post" style="background-color: white;">
@@ -111,7 +110,7 @@
                         <div class="details_two">
                             <img src="{{profile_img}}" style="width: 50px; border-radius: 50%;">
                             <div>
-                                <p><button>{{name}}</button> • <button id="follow">Follow</button></p>
+                                <a href="/{{name}}"><button>{{name}}</button> • <button id="follow">Follow</button><br>
                                 <span>{{music_post}}</span>
                             </div>
                         </div>
@@ -123,9 +122,10 @@
                             <img src="{{profile_img}}" style="width: 50px; border-radius: 50%;">
                             
                             <div class="comment" >
-                                <span id="comment_line">
-                                    <a href="./main.html">{{name}}</a> <span >{{descrition_post}}</span>
-                                </span>
+                                <div id="comment_line">
+                                    <a href="./{{name}}">{{name}}</a> 
+                                    <span>descrition_post</span>
+                                </div>
                                 
                                 <div class="data_like_res">
                                     <span>2d</span>
@@ -165,10 +165,10 @@
             <div class="line2"></div>
         </div>
 
-        <div id="arrow-left" class="arrow-button">
+        <div id="arrow-left" class="arrow-button" style="display: none;">
             <img src="./icons/seta.png" style="width: 10px;">
         </div>
-        <div id="arrow-right" class="arrow-button">
+        <div id="arrow-right" class="arrow-button" style="display: none;">
             <img src="./icons/seta.png" style="width: 10px; transform: rotate(180deg);">
         </div>
         

@@ -9,7 +9,7 @@
     "posts_user":[{
         "number": 1,
         "data_post": "2d",
-        "music_name": "Batman 1989 Theme by Danny Elfman",
+        "music_name":"Batman 1989 Theme by Danny Elfman",
         "post_img":"./picture_users/batman/post01.jpg",
         "descrition_post": "Going fight crime. Its be long night."
         },{
@@ -23,7 +23,7 @@
         "data_post": "",
         "music_name": "",
         "post_img":"./picture_users/batman/post03.jpg",
-        "descrition_post": "" 
+        "descrition_post": "Cames, Is that all you have?" 
         }],
     
     "reels_user":[{
@@ -42,7 +42,7 @@
         "data_post": "2d",
         "music_name": "",
         "post_img":"./picture_users/wonderwoman/post01.jpg",
-        "descrition_post": ""
+        "descrition_post": "Smiling."
         }],
     "reels_user":[{
         
@@ -60,35 +60,201 @@
         "data_post": "",
         "music_name": "",
         "post_img":"./picture_users/superman/post01.jpg",
-        "descrition_post": ""
+        "descrition_post": "lol classic me"
         },{
         "number": 2,
         "data_post": "",
         "music_name": "",
         "post_img":"./picture_users/superman/post02.jpg",
-        "descrition_post": ""
-        },{
-        "number": 3,
-        "data_post": "",
-        "music_name": "",
-        "post_img":"./picture_users/superman/post03.jpg",
-        "descrition_post": ""
+        "descrition_post": "Hope"
         },{
         "number": 4,
         "data_post": "",
         "music_name": "",
         "post_img":"./picture_users/superman/post04.jpg",
-        "descrition_post": ""
+        "descrition_post": "Saving a cat"
         },{
         "number": 5,
         "data_post": "",
         "music_name": "",
         "post_img":"./picture_users/superman/post05.jpg",
-        "descrition_post": ""
+        "descrition_post": "With my friends"
         }],
     
     "reels_user":[{
         
+    }]
+},{
+    "name": "tony_stark",
+    "profile_img":"./picture_users/tonystark/profile.jpg",
+    "descrition":"you know who i am",
+    
+    "follower":[""],
+    "following":[],
+
+    "posts_user":[{
+        "number": 1,
+        "data_post": "",
+        "music_name":"",
+        "post_img":"./picture_users/tonystark/post01.jpg",
+        "descrition_post": "Working."
+        },{
+        "number": 2,
+        "data_post": "",
+        "music_name":"",
+        "post_img":"./picture_users/tonystark/post02.jpg",
+        "descrition_post": ""
+        },{
+        "number": 3,
+        "data_post": "",
+        "music_name":"",
+        "post_img":"./picture_users/tonystark/post03.jpg",
+        "descrition_post": "New Car."
+        },{
+        "number": 4,
+        "data_post": "",
+        "music_name":"",
+        "post_img":"./picture_users/tonystark/post04.jpg",
+        "descrition_post": "Working with my friends @James_Rhodes"
+        },{
+        "number": 5,
+        "data_post": "",
+        "music_name":"",
+        "post_img":"./picture_users/tonystark/post05.jpg",
+        "descrition_post": "show-off😆"
+        }],
+    
+    "reels_user":[{
+
+    }]
+},{
+    "name": "spiderman",
+    "profile_img":"./picture_users/spiderman/profile.jpg",
+    "descrition":" your friendly neighborhood Spider-Man! 🕸️",
+    
+    "follower":[],
+    "following":[],
+
+    "posts_user":[{
+        "number": 1,
+        "data_post": "",
+        "music_name":"",
+        "post_img":"./picture_users/spiderman/post01.jpg",
+        "descrition_post": "picture by @peter_parker"
+        },{
+        "number": 2,
+        "data_post": "",
+        "music_name":"",
+        "post_img":"./picture_users/spiderman/post02.jpg",
+        "descrition_post": "shazam!"
+        },{
+        "number": 3,
+        "data_post": "",
+        "music_name":"",
+        "post_img":"./picture_users/spiderman/post03.avif",
+        "descrition_post": "Great day!"
+        },{
+        "number": 4,
+        "data_post": "",
+        "music_name":"",
+        "post_img":"./picture_users/spiderman/post04.jpg",
+        "descrition_post": "I am vengeance, I am the night, I'm spiderman! @batmanprofile"
+        }],
+    
+    "reels_user":[{
+
+    }]
+},{
+    "name": "clark.kent",
+    "profile_img":"./picture_users/clarkkent/profile.jpg",
+    "descrition":"jornalist from Planet of Daliy",
+    
+    "follower":[""],
+    "following":[],
+
+    "posts_user":[{
+        "number": 1,
+        "data_post": "",
+        "music_name":"",
+        "post_img":"./picture_users/clarkkent/post01.webp",
+        "descrition_post": ""
+        },{
+        "number": 2,
+        "data_post": "",
+        "music_name":"",
+        "post_img":"./picture_users/clarkkent/post02.jpg",
+        "descrition_post": "Work Table"
+        },{
+        "number": 3,
+        "data_post": "",
+        "music_name":"",
+        "post_img":"./picture_users/clarkkent/post03.jpg",
+        "descrition_post": "lol"
+        },{
+        "number": 4,
+        "data_post": "",
+        "music_name":"",
+        "post_img":"./picture_users/clarkkent/post4.jpg",
+        "descrition_post": "Hi!"
+        },{
+        "number": 5,
+        "data_post": "",
+        "music_name":"",
+        "post_img":"./picture_users/clarkkent/post05.webp",
+        "descrition_post": "Daily Planet"
+        },{
+        "number": 6,
+        "data_post": "",
+        "music_name":"",
+        "post_img":"./picture_users/clarkkent/post06.webp",
+        "descrition_post": "Haha, just another ordinary day here at the Daily Planet! 📰👓"
+        },{
+        "number": 7,
+        "data_post": "",
+        "music_name":"",
+        "post_img":"./picture_users/clarkkent/post07.jpg",
+        "descrition_post": ""
+        },{
+        "number": 8,
+        "data_post": "",
+        "music_name":"",
+        "post_img":"./picture_users/clarkkent/post08.jpg",
+        "descrition_post": ""
+        }],
+    
+    "reels_user":[{
+
+    }]
+},{
+    "name": "ciborgue",
+    "profile_img":"./picture_users/ciborgue/profile1.jpg",
+    "descrition":"01001111 01101001",
+    
+    "follower":[""],
+    "following":[],
+
+    "posts_user":[{
+        "number": 1,
+        "data_post": "",
+        "music_name":"",
+        "post_img":"./picture_users/ciborgue/post01.jpg",
+        "descrition_post": ""
+        },{
+        "number": 2,
+        "data_post": "",
+        "music_name":"",
+        "post_img":"./picture_users/ciborgue/post02.png",
+        "descrition_post": "New setup"
+        },{
+        "number": 3,
+        "data_post": "",
+        "music_name":"",
+        "post_img":"./picture_users/ciborgue/post03.jpg",
+        "descrition_post": "friends"
+        }],
+    
+    "reels_user":[{
+
     }]
 }]
 

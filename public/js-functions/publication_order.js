@@ -40,22 +40,33 @@ document.addEventListener('DOMContentLoaded', () =>{
             const content = ps.querySelector('img').src;
             view_img_video.src = content;
 
+            const detail_two = document.querySelector('.details_two div span');
+            console.log(detail_two);
+            const music = ps.querySelector('#music_post').innerHTML;
+            detail_two.innerHTML = music;
+
             const comment = document.querySelector('#comment_line').querySelector('span');
             const about = ps.querySelector('span').innerHTML;
             comment.innerHTML = about;
 
             document.querySelector('.post_view_center').style.display = 'flex';
             document.querySelector('.close-btn').style.display = 'flex';
+            document.querySelectorAll('.arrow-button').forEach(button => {
+                button.style.display = 'flex';
+            });
         });
     });
 });
 
 
 document.addEventListener('click', (event) => {
-    if(!event.target.closest('.post_view') && event.target.closest('.post_view_center'))
+    if(!event.target.closest('.post_view') && event.target.closest('.post_view_center') || event.target.closest('.close-btn'))
     {
     document.querySelector('.post_view_center').style.display = 'none';
     document.querySelector('.close-btn').style.display = 'none';
+    document.querySelectorAll('.arrow-button').forEach(button => {
+        button.style.display = 'none';
+    });
     };
 })
 
