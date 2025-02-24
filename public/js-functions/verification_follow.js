@@ -2,7 +2,6 @@
 document.addEventListener('DOMContentLoaded', async () => {
     const followButton = document.getElementById('follow_user');
     const username = document.querySelector('.first_line_profile span').textContent;
-    console.log('chegou ae aqui 1');
     try {
         
         const response = await fetch('/yourdata');
