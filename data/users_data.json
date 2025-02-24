@@ -1,5 +1,6 @@
 [{
     "name": "batmanprofile",
+    "nameuser": "Batman",
     "profile_img":"./picture_users/batman/batmanprofile.jpg",
     "descrition":"Work with vigilance\nIam vingance, Iam night, IAM BATMAN",
     
@@ -11,7 +12,7 @@
         "data_post": "2d",
         "music_name":"Batman 1989 Theme by Danny Elfman",
         "post_img":"./picture_users/batman/post01.jpg",
-        "descrition_post": "Going fight crime. Its be long night."
+        "descrition_post": "Going to fight crime. It's going to be a long night"
         },{
         "number": 2,
         "data_post": "",
@@ -31,6 +32,7 @@
     }]
 },{
     "name": "wonderwomanprofile",
+    "nameuser": "Wonder Woman",
     "profile_img":"./picture_users/wonderwoman/profile.jpg",
     "descrition":"Hi! Iam wonderwoman. Your favorite superhero.",
     
@@ -49,6 +51,7 @@
     }]    
 },{
     "name": "supermanprofile",
+    "nameuser": "Superman",
     "profile_img":"./picture_users/superman/pictureprofile.jpg",
     "descrition":"Smile!\nFather\nHusband\nLider of justice league.",
 
@@ -86,6 +89,7 @@
     }]
 },{
     "name": "tony_stark",
+    "nameuser": "Iron man",
     "profile_img":"./picture_users/tonystark/profile.jpg",
     "descrition":"you know who i am",
     
@@ -129,6 +133,7 @@
     }]
 },{
     "name": "spiderman",
+    "nameuser": "Spider Man",
     "profile_img":"./picture_users/spiderman/profile.jpg",
     "descrition":" your friendly neighborhood Spider-Man! 🕸️",
     
@@ -165,7 +170,8 @@
 
     }]
 },{
-    "name": "clark.kent",
+    "name": "clark.kent.planetjornal",
+    "nameuser": "Clark Kent",
     "profile_img":"./picture_users/clarkkent/profile.jpg",
     "descrition":"jornalist from Planet of Daliy",
     
@@ -227,6 +233,7 @@
     }]
 },{
     "name": "ciborgue",
+    "nameuser": "Ciborgue",
     "profile_img":"./picture_users/ciborgue/profile1.jpg",
     "descrition":"01001111 01101001",
     

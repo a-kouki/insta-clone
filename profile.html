@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="./js-functions/menu_options.js"></script>
+    <script type="module" src="./js-functions/publication_order.js"></script>
+    <script type="module" src="./js-functions/search_menu.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./styles/profile.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/menus.css" />
+
+    <title>Document</title>
+</head>
+
+<header>
+
+    <div class="area_search">
+        <div class="input_search">
+            <span>Search</span>
+            <input id="search" placeholder="Search">
+        </div>
+        <div class="list_search"></div>
+    </div>
+    
+    <div class="menus">
+    </div>
+    
+    <div class="moreoptions">
+        <div>
+            <button><img src="./icons/saved.png"><span>Setting</span></button>
+            <button><img src="./icons/saved.png"><span>Your activity</span></button>
+            <button><img src="./icons/saved.png"><span>Saved</span></button>
+            <button><img src="./icons/saved.png"><span>Switch appearance</span></button>
+            <button><img src="./icons/saved.png"><span>Report a problem</span></button>
+        </div>
+
+        <span class="gap"></span>
+
+        <div>
+            <button><span>Threads</span></button>
+        </div>
+
+        <span class="gap"></span>
+
+        
+        <div><button><span>Switch accounts</span></button></div>
+        <span id="gapid"></span>
+        <div><button><span>Log out</span></button></div>
+    </div>
+
+    <div class="profile">
+        <img id="image_profile" src="{{profile_img}}">
+
+        <div class="profile_detail">
+            <div class="first_line_profile">
+                <span>{{name}}</span>
+                <button>Edit profile</button>
+                <button>View archive</button>
+                <button>config</button>
+            </div>
+
+            <div class="second_line_profile">
+                <span>{{N posts}}</span>
+                <button>{{N followers}}</buttno>
+                <button>{{N following}}</button>
+            </div>
+
+            <textarea name="textarea" rows="5" cols="30" placeholder="{{descrition}}" disabled></textarea>
+        </div>
+    </div>
+
+</header>
+<body>
+    <div class="for_middle">
+        <div class="you_stories">
+            <div>
+                <button>
+                    <div class="plus plus_one"></div>
+                    <div class="plus plus_two"></div>
+                </button>
+                <span>New</span>
+            </div>
+            
+        </div>
+
+        <div style="padding-top: 50px;"><hr style="width: 935px; margin-bottom: 0;"></div>
+        <div class="your_post_saved">
+            <button id="new_id_for_button" name="one" onclick="border('posts')">POSTS</button>
+            <button id="posts_saved" name="two" onclick="border('saved')">SAVED</button>
+            <button id="posts_tagged" name="three" onclick="border('tagged')">TAGGED</button>
+        </div>
+
+
+        <div class="posts_area" id="posts_area" style="display: grid;">
+            {{posts}}
+        </div>
+    </div>
+
+    <div class="post_view_center" style="display: none;">
+        <div class="post_view" >
+            <div class="img_or_Video" style="background-color: black;">
+                <img id="post_img" src="{{post_image}}">
+            </div>
+
+            <div class="about_post" style="background-color: white;">
+                <div class="details_one">
+                    <div class="details_two">
+                        <img src="{{profile_img}}" style="width: 50px; border-radius: 50%;">
+                        <div>
+                            <p><button>{{name}}</button> • <button id="follow">Follow</button></p>
+                            <span>{{music_post}}</span>
+                        </div>
+                    </div>
+                    <p>•••</p>
+                </div>
+
+                <div class="area_comment">
+                    <div class="each_comment">
+                        <img src="{{profile_img}}" style="width: 50px; border-radius: 50%;">
+                        
+                        <div class="comment" >
+                            <span id="comment_line">
+                                <a href="./main.html">{{name}}</a><span >{{descrition_post}} </span>
+                            </span>
+                            
+                            <div class="data_like_res">
+                                <span>2d</span>
+                                <span>2 gosto</span>
+                                <span>Responder</span>
+                            </div>
+                        </div>
+
+                        <img src="./icons/coracao.png" width="10px">
+                    </div>
+
+                </div>
+
+                <div class="icons">
+                    <div class="icons_right">
+                        <button><img src="./icons/heart.png"></button>
+                        <button><img src="./icons/message.png"></button>
+                        <button><img src="./icons/send.png"></button>
+                    </div>
+    
+                    <button><img src="./icons/save.png" ></button>
+                </div>
+
+                <div><button>Like by</button></div>
+
+                <div class="publish_comment">
+                    <span>🙂​</span>
+                    <textarea placeholder="Add a comment.."></textarea>
+                    <span>Publish</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        /*
+        let test = ' ';
+
+        for (let i=0; i <= 20; i++){
+            test += 
+            `
+                <div class="each_comment">
+                        <img src="./icons/profile.jpg" style="width: 50px; border-radius: 50%;">
+                        <div class="comment">
+                            <span id="comment_line" style="padding-top: 5px;">
+                                <a href="./main.html">user_name</a> <span >exemplo</span>
+                            </span>
+                            <div class="data_like_res">
+                                <span>2d</span>
+                                <span>2gosto</span>
+                                <span>Responder</span>
+                            </div>
+                        </div>
+                        <img src="./icons/coracao.png" width="10px" style="padding-top: 25px;">
+                    </div>
+            `
+        };
+
+        document.querySelector('.area_comment').innerHTML = test;
+        */
+
+        function border(type){ 
+            const posts = document.getElementsByName('one');
+            const saved = document.getElementsByName('two');
+            const tagged = document.getElementsByName('three');
+
+            if (type === "posts"){
+                posts[0].id = "new_id_for_button";
+                saved[0].id = "original_id_for_button";
+                tagged[0].id = "original_id_for_button";
+                document.querySelector('#posts_area').style.display = 'grid';
+            }else if(type === "saved"){
+                posts[0].id = "original_id_for_button";
+                saved[0].id = "new_id_for_button";
+                tagged[0].id = "original_id_for_button";
+                document.querySelector('#posts_area').style.display = 'none';
+            }else if(type === "tagged"){
+                posts[0].id = "original_id_for_button";
+                saved[0].id = "original_id_for_button";
+                tagged[0].id = "new_id_for_button";
+                document.querySelector('#posts_area').style.display = 'none';
+            }
+        };
+    </script>
+</body>
+</html>

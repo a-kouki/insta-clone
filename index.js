@@ -89,7 +89,11 @@ app.get('/yourdata', (req, res) => {
     const yourData = loadYourData();
     res.json(yourData);
 });
-
+app.get('/usersearch', (req, res) => {
+    const users = loadUsersData();
+   // const u = users.map(u => u.name);
+    res.json(users);
+});
 app.get('/:username', (req, res) => {
     const username = req.params.username; 
     const users = loadUsersData();
