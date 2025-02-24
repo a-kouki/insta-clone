@@ -2,7 +2,7 @@
 
 *Still in progress
 
-*Last update: you can follow and new users
+*Last update: Now, you can search for users in the menu.
 
 ## Run
 
